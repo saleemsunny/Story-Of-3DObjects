@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <title>3D Objects and their story</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        .w3-bar,
+        h1,
+        button {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .fa-anchor,
+        .fa-coffee {
+            font-size: 200px
+        }
+    </style>
+
+
+    <style>
+        .oldpage {
+            background-color: #f8f5de;
+            background-image: linear-gradient(to right, rgba(255, 210, 0, 0.4), rgba(200, 160, 0, 0.1) 11%, rgba(0, 0, 0, 0) 35%, rgba(200, 160, 0, 0.1) 65%);
+            box-shadow: inset 0 0 75px rgba(255, 210, 0, 0.3), inset 0 0 20px rgba(255, 210, 0, 0.4), inset 0 0 30px rgba(220, 120, 0, 0.8);
+            color: rgba(0, 0, 0, 0.5);
+            font-family: "AustralisProSwash-Italic";
+            width: calc(8.5in - 10em);
+            letter-spacing: 0.05em;
+            line-height: 1.2;
+            padding: 2em 2em 2em 2em;
+        }
+
+        .OldPageHeader {
+
+            background-color: #f8f5de;
+            background-image: linear-gradient(to right, rgba(255, 210, 0, 0.4), rgba(200, 160, 0, 0.1) 11%, rgba(0, 0, 0, 0) 35%, rgba(200, 160, 0, 0.1) 65%);
+            box-shadow: inset 0 0 75px rgba(255, 210, 0, 0.3), inset 0 0 20px rgba(255, 210, 0, 0.4), inset 0 0 30px rgba(220, 120, 0, 0.8);
+            color: rgba(0, 0, 0, 0.5);
+            font-family: "AustralisProSwash-Italic";
+
+        }
+
+        .caps {
+            color: rgba(0, 0, 0, 0.7);
+            float: left;
+            font-size: 7em;
+            line-height: 60px;
+            padding-right: 12px;
+            position: relative;
+            top: 8px;
+        }
+    </style>
+</head>
+
+
+<style>
+    model-viewer {
+
+        width: 360px;
+        height: 500px;
+        margin: 0 auto;
+
+    }
+
+    p {
+        transform: perspective(300em) rotateX(18deg);
+        box-shadow: rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
+            rgba(19, 26, 32, 0.08) 0px 35px 75px -35px;
+        border-radius: 10px;
+        border: 1px solid;
+        border-color: rgb(213, 220, 226) rgb(213, 220, 226) rgb(184, 194, 204);
+        padding-top: 20px;
+        padding-right: 50px;
+        padding-bottom: 20px;
+        padding-left: 50px;
+    }
+
+    h5 {
+        transform: perspective(200em) rotateX(18deg);
+        box-shadow: rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
+            rgba(19, 26, 32, 0.08) 0px 35px 75px -35px;
+        border-radius: 10px;
+        border: 1px solid;
+        border-color: rgb(213, 220, 226) rgb(213, 220, 226) rgb(184, 194, 204);
+        padding-top: 50px;
+        padding-right: 50px;
+        padding-bottom: 50px;
+        padding-left: 50px;
+    }
+
+    Avatar {
+
+        width: 50px;
+        height: 360px;
+        margin: 0 auto;
+
+
+
+
+    }
+</style>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+    </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-container  w3-center" style=" padding-top: 5px; padding-right: 5px; padding-bottom: 20em; padding-left: 5px;">
+        <h1 class="w3-margin w3-jumbo OldPageHeader ">STORY OF DIFFERENT 3D OBJECTS CAPTURED BY PHOTOGRAMMETRY</h1>
+    </header>
+
+    <!-- Salt -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-twothird">
+                <h1>Salt</h1>
+                <h5 class="w3-padding-32 oldpage" align="justify">Bad Reichenhall is a significant district town in the
+                    administrative area
+                    of Upper Bavaria and the district town of Berchtesgadener Land. The city has a four thousand year
+                    history that
+                    is intimately related to the mining of salt from brine. In Germany, Bad Reichenhaller Alpensalz has
+                    a market share of more than
+                    50%. Since the middle of the nineteenth century, the town has been recognized as a spa and holiday
+                    destination; the spa has been
+                    in its name since 1890, and the town was accorded the title of Royal Bavarian State Spa in 1899. The
+                    spa town is located in Saalachtal,
+                    which is surrounded by the slopes of the Berchtesgaden and Chiemgau Alps.
+                    <p>During the Bell Beaker civilization, there was already a
+                        permanent settlement
+                        and significant trading networks,
+                        according to finds in the Reichenhall area (2600 to 2300 BC). This was only accurately verified
+                        by
+                        the discovery of several burial sites from the
+                        Urnfield period (1600-750 BC) in the vicinity of today's Karlstein district. There was also a
+                        Celtic
+                        worship site in the Langacker valley and a mint at
+                        the "Haiderburgstein" during the La Tène period (450-15 BC).</p>
+                </h5>
+
+
+            </div>
+
+            <div class="w3-third w3-center">
+                <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+                <model-viewer src="assets\Salt.gltf" camera-controls auto-rotate></model-viewer>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ja chips-->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+
+            <div class="w3-third w3-center">
+                <!---- <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+                <model-viewer src="assets\chipscan.gltf" camera-controls auto-rotate></model-viewer>
+            </div>
+
+            <div class="w3-twothird">
+                <h1>Chips</h1>
+                <h5 class="w3-padding-32 oldpage" align="justify">
+                    The trademark ja! was launched in 1982 to compete with Aldi with a low-cost brand. Kaiser +
+                    Kellermann joined the trade group in 1983,
+                    and Rewe eventually acquired a 75% share in the firm. The purchase of 50% of Atlas Travel Agency
+                    means joining the tourist business.
+                    With the acquisition of ITS Reisen in the mid-1990s, the company made another investment in this
+                    market. The Bon appétit Group (see Usego) was acquired in 2003.
+                    Rewe expanded throughout the new federal states following German reunification. For example, the
+                    first supermarkets were erected in Weimar and Berlin. Rewe took over
+                    the Austrian group around Billa and Merkur in 1996 after experimenting with setting up Penny-branded
+                    stores in England, Italy, Spain, and France. 
+                    <p> According to a historian on the BBC's Inside the
+                        Factory, there
+                        was a cookbook
+                        recipe in England in 1817 outlining how to create chips.
+                        According to a popular culinary legend, potato chips were developed on August 24, 1853 by George
+                        Crum, a cook at the Hotel Moon Lake Lodge in Saratoga Springs, New York,
+                        when a guest - supposed to be industrial mogul Cornelius Vanderbilt - complained about overly
+                        thick
+                        fried potatoes. To Crum's amazement, when they were ultimately so thin that they couldn't be
+                        eaten
+                        with a fork,
+                        the guests enjoyed them, and his innovation was subsequently introduced to the menu as Saratoga
+                        chips. They quickly became well-known across New England. The local museum suggests that Crum's
+                        sister accidently slipped a too-thin slice of potato into hot fat, and Crum was so delighted
+                        with the result that he offered the potato chips at the restaurant.
+                    </p>
+                    <p> At the moment i am using it as a Piggy bank
+                    </p>
+
+                </h5>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Stone -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-twothird">
+                <h1>Stone</h1>
+                <h5 class="w3-padding-32 oldpage" align="justify">A stone is a fragment of rock. It is a hard,
+                    compressed
+                    mineral mass. The term
+                    is frequently used to refer to a little chunk of rock.
+                    Natural rock, particularly as a construction material, is frequently referred to as "stone."
+                    Granite, marble, and sandstone are examples of natural stones used in construction.
+                    Stone does not include manufactured, artificial items such as concrete or clay bricks. The stone
+                    takes time to heat up and stays hot for a long time. It has poor electrical conductivity.
+                    Stone was among the earliest materials used to create tools and structures. It's a really strong
+                    substance. It is less susceptible to weather than wood or brick.
+                    Stone weathers significantly more slowly depending on the type of rock.
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do
+                        eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut
+                        enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </h5>
+
+
+            </div>
+
+            <div class="w3-third w3-center">
+                <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+                <model-viewer src="assets\stone.gltf" camera-controls auto-rotate></model-viewer>
+            </div>
+        </div>
+    </div>
+    <!-- AxeSpray -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-third w3-center">
+                <!---- <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+                <model-viewer src="assets\AxeUpdated.gltf" camera-controls auto-rotate></model-viewer>
+            </div>
+
+            <div class="w3-twothird">
+                <h1>Axe body spray</h1>
+                <h5 class="w3-padding-32 oldpage" align="justify">Unilever introduced Axe in France in 1983.
+                    It was inspired by Impulse, another Unilever brand. Unilever released various items in the line,
+                    but because to trademark concerns with the Axe name, was compelled to adopt the name Lynx in the
+                    United Kingdom,
+                    Ireland, Australia, and New Zealand. Furthermore, other nations (such as South Africa) launched the
+                    brand as EGO.
+                    <p>Mum, the first modern commercial deodorant,
+                        was invented and patented in 1888 by Edna Murphey, a Philadelphia,
+                        Pennsylvania-based inventor. Bristol-Myers purchased the little firm in 1931,
+                        and Helen Barnett Diserens created an underarm applicator based on the newly invented
+                        ball-point pen in the late 1940s. The product was first marketed under the name Ban Roll-On in
+                        1952.
+                        The product was momentarily removed off the market in the United States, but it is now
+                        accessible at
+                        merchants
+                        in the United States under the name Ban. Mum Solid and Mum Pump Spray are the brand names used
+                        in
+                        the United Kingdom.
+                        Chattem purchased the Ban deodorant brand in 1998 and then sold it to Kao Corporation in 2000.
+                    </p>
+                </h5>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Potato -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-twothird">
+                <h1>Potato</h1>
+                <h5 class="w3-padding-32 oldpage" align="justify">
+                    The Spanish brought potatoes from the Americas to Europe in the second part of the 16th century.
+                    They are now a staple food in many regions of the world, as well as an essential component of much
+                    of the world's food supply.
+                    Potatoes were the world's fourth-largest food crop in 2014, after only maize (corn), wheat, and
+                    rice.
+                    There are currently over 5,000 different varieties of potatoes as a result of millennia of selective
+                    breeding.
+                    Over 99% of the potatoes grown now are descended from cultivars that originated in the plains of
+                    south-central Chile.
+                    The potato's value as a food source and culinary element varies by area and is always changing. It
+                    is still an important crop in Europe,
+                    particularly in Northern and Eastern Europe.
+                    <p> Pre-Columbian farmers initially cultivated the potato
+                        near Lake
+                        Titicaca in modern-day southern Peru and northwestern Bolivia.
+                        Since then, it has expanded around the world and has become a staple crop in many nations.
+                        The oldest archaeologically proven potato tuber remnants date from 2500 BC and were discovered
+                        at
+                        the coastal settlement of Ancon (central Peru).
+                        Solanum tuberosum tuberosum, the most extensively grown variety, is endemic to the Chiloé
+                        Archipelago and has been farmed by the local indigenous people since before the Spanish
+                        invasion.
+                    </p>
+                </h5>
+
+
+            </div>
+
+            <div class="w3-third w3-center">
+                <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+                <model-viewer src="assets\Potato.gltf" camera-controls auto-rotate></model-viewer>
+            </div>
+        </div>
+    </div>
+    <!-- Soap -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-third w3-center">
+                <!---- <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+                <model-viewer src="assets\Soap.gltf" camera-controls auto-rotate></model-viewer>
+            </div>
+
+            <div class="w3-twothird">
+                <h1>Soap</h1>
+                <h5 class="w3-padding-32 oldpage" align="justify">
+                    It is unknown who was the first to develop soap.
+                    The oldest indication of soap-like compounds being produced goes back to roughly 2800 BC in ancient
+                    Babylon. Around 2500 BC,
+                    a method for making soap was written on a Sumerian clay tablet;
+                    the soap was made by heating a mixture of oil and wood ash, the first documented chemical reaction,
+                    and was used to wash woolen clothes.
+                    According to the Ebers papyrus (Egypt, 1550 BC), the ancient Egyptians used soap as a remedy and
+                    made their soaps by combining animal fats or
+                    vegetable oils with a soda ash material called Trona. According to Egyptian texts, a similar
+                    chemical was employed in the processing of wool for weaving.
+                    <p>In the late sixth century (when Naples was under the
+                        rule of the
+                        Eastern Roman Empire),
+                        soapmakers formed a guild, and by the eighth century, soap-making was well known in Italy and
+                        Spain.
+                        The Carolingian capitulary De Villis, which dates approximately 800 and represents Charlemagne's
+                        royal testament,
+                        includes soap as one of the items the stewards of royal estates are to tally. By 800, Medieval
+                        Spain's territories were a dominant soapmaker,
+                        while soapmaking began in the Kingdom of England about 1200. Soapmaking is cited as both
+                        "women's
+                        labour" and "excellent workmen's output,"
+                        among other requirements such as carpenters', blacksmiths', and bakers' produce.</p>
+                </h5>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Milk -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-twothird">
+                <h1>Milk</h1>
+                <h5 class="w3-padding-32 oldpage" align="justify">In the late 1990s, milk bags were used in Australia
+                    (Greater
+                    Shepparton, Victoria),
+                    and were supplied by the Shepparton-based dairy firm Ducats. At the 1970s and early 1980s, they were
+                    also used in Gympie,
+                    Queensland, and about the same period in Caboolture, Queensland. These were a pint size.
+                    <p>In the United Kingdom, Sainsbury's conducted a test
+                        operation
+                        with Dairy Crest in 2008 to distribute milk in bags.
+                        It was initially intended for 35 retailers at the same price as a conventional 2-imperial-pint
+                        (1.1
+                        l) plastic milk bottle.
+                        In 2010, the product was expanded nationwide, and the bags were sold at a lower price than
+                        standard
+                        containers.
+                        The bags are typically used in conjunction with a particular plastic jug in the United Kingdom.
+                        The bag fits snuggly inside the jug; one corner of the bag is locked under a bar at the front of
+                        the
+                        jug, and when the top is closed, the bag is perforated and a spout glides into the hole,
+                        enabling
+                        the milk to be readily dispensed while keeping freshness.</p>
+                </h5>
+
+
+            </div>
+
+            <div class="w3-third w3-center">
+                <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+                <model-viewer src="assets\Milk.gltf" camera-controls auto-rotate></model-viewer>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Shampoo -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-third w3-center">
+                <!---- <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>-->
+                <model-viewer src="assets\Shampoo 3rd iteration.gltf" camera-controls auto-rotate></model-viewer>
+            </div>
+
+            <div class="w3-twothird">
+                <h1>Shampoo</h1>
+                <h5 class="w3-padding-32 oldpage" align="justify">Since ancient times, a variety of plants and their
+                    extracts
+                    have been utilized
+                    as
+                    shampoo on the Indian subcontinent. Shampoo originated in the Indus Valley Civilization. Sapindus
+                    was boiled
+                    with dried Indian gooseberry (amla) and a variety of other herbs, and the filtered extract was used
+                    to make a highly
+                    efficient early shampoo. Sapindus, often known as soapberries or soapnuts, is a tropical tree found
+                    across India.
+                    Its fruit pulp contains saponins,
+                    which function as a natural surfactant. Soapberry extract produces a lather known as phenaka in
+                    Indian scriptures.
+                    It makes the hair smooth, lustrous(reflecting light evenly),
+                    and easy to handle. Shikakai (Acacia concinna), hibiscus blossoms, and ritha were also used to
+                    cleanse the hair.
+                    <p>Sake Dean Mahomed, a Bengali wanderer, surgeon, and
+                        entrepreneur, is credited
+                        for bringing shampooing to the United Kingdom.
+                        Mahomed created the first commercial "shampooing" vapor masseur bath in England, in Brighton, in
+                        1814, with his Irish wife Jane Daly.
+                        In a local newspaper, he defined the therapy as "the Indian Medicated Vapor Bath (kind of
+                        Turkish
+                        bath), a remedy to many ailments and offering full relief when everything else fails;
+                        notably Rheumatic and paralytic, gout, stiff joints, old sprains, lame legs, aches and pains in
+                        the
+                        joints."
+                    </p>
+                </h5>
+
+
+            </div>
+        </div>
+
+        <!-- Gasmask -->
+        <div class="w3-row-padding w3-padding-64 w3-container">
+            <div class="w3-content">
+                <div class="w3-twothird">
+                    <h1>Gas Mask</h1>
+                    <h5 class="w3-padding-32 oldpage" align="justify">To allow vision, the original gas masks usually
+                        featured
+                        round lenses
+                        composed
+                        of glass,
+                        mica, or cellulose acetate. Glass and mica were extremely fragile and required to be replaced on
+                        a
+                        regular basis.
+                        The subsequent Triplex lens design (a cellulose acetate lens sandwiched between two glass
+                        lenses)
+                        grew increasingly popular,
+                        and it was the standard until the 1930s, alongside plain cellulose acetate. Panoramic lenses did
+                        not
+                        become popular until the 1930s,
+                        however there are cases of them being used even during WWII . Later, stronger polycarbonate was
+                        used.
+
+                        <p>According to Popular Mechanics, "the ordinary
+                            sponge
+                            was
+                            employed as a gas
+                            mask
+                            in ancient Greece."
+                            Jean-François Pilâtre de Rozier created the respirator in 1785.
+                            Miners utilized primitive respirator prototypes, which Alexander von Humboldt presented in
+                            1799
+                            while working as
+                            a mining engineer in Prussia. Lewis P. Haslett devised the predecessor of the current gas
+                            mask
+                            in
+                            1847,
+                            a device that had features that permitted breathing through a nose and mouthpiece, intake of
+                            air
+                            through a bulb-shaped filter,
+                            and exhalation of air back into the atmosphere. According to First Facts, Lewis Phectic
+                            patented
+                            a
+                            "gas mask like the present variety."</p>
+                    </h5>
+
+
+                </div>
+
+                <div class="w3-third w3-center">
+                    <!--<i class="fa fa-anchor w3-padding-64 w3-text-red"></i>-->
+                    <model-viewer src="assets\GasMask.gltf" camera-controls auto-rotate></model-viewer>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="w3-container  w3-center  w3-padding-64">
+            <h1 class="w3-margin w3-xlarge OldPageHeader">Quote of the day: live life <model-viewer id="Avatar"
+                    src="assets\Avatar.glb" camera-controls auto-rotate></model-viewer>
+            </h1>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+            <div class="w3-xlarge w3-padding-32">
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+                <i class="fa fa-snapchat w3-hover-opacity"></i>
+                <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                <i class="fa fa-twitter w3-hover-opacity"></i>
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </div>
+
+        </footer>
+
+        <script>
+            // Used to toggle the menu on small screens when clicking on the menu button
+            function myFunction() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+        </script>
+
+</body>
+
+</html>
